@@ -1,0 +1,6 @@
+node_modules/
+temp/
+build/
+test/
+*.log
+AGENTS.md

@@ -1,0 +1,65 @@
+{
+  "name": "opencode-quota-dashboard",
+  "version": "0.1.0",
+  "description": "OpenCode Desktop 额度面板：DeepSeek 余额、OpenCode Go 额度、GLM 与 MiMo 用量。",
+  "type": "module",
+  "license": "MIT",
+  "author": "bricika",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bricika/opencode-quota-dashboard.git"
+  },
+  "homepage": "https://github.com/bricika/opencode-quota-dashboard#readme",
+  "bugs": {
+    "url": "https://github.com/bricika/opencode-quota-dashboard/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "quota",
+    "balance",
+    "usage",
+    "dashboard",
+    "deepseek",
+    "opencode-go",
+    "glm",
+    "mimo",
+    "额度"
+  ],
+  "exports": {
+    ".": "./src/index.ts",
+    "./rpc": "./src/rpc.ts",
+    "./gui-experimental": "./dist/gui-experimental.cjs"
+  },
+  "files": [
+    "src",
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "test": "node --test test/*.test.mjs",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "dependencies": {
+    "@opencode/plugin": "^2.2.7"
+  },
+  "peerDependencies": {
+    "solid-js": ">=1.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "solid-js": "^1.9.9",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.7",
+    "vite-plugin-solid": "^2.11.8"
+  }
+}
